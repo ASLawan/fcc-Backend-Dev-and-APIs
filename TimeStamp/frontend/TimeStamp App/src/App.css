@@ -34,6 +34,10 @@
   color: snow;
 }
 
+.form input::placeholder {
+  color: #d1d1d1;
+}
+
 .form button {
   outline: none;
   border: none;
