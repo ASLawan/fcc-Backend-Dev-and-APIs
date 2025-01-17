@@ -51,3 +51,24 @@ header.addEventListener("mouseover", () => {
 header.addEventListener("mouseout", () => {
   header.style.color = "White";
 });
+
+// CALCULATE EMI
+
+const calculateEMI = () => {
+  let principal = document.getElementById("amount").value;
+  let duration = document.getElementById("duration").value;
+  let rate = document.getElementById("roi").value / 100 / 12;
+
+  //calculate emi
+  const emi = (
+    (principal * rate * Math.pow(1 + rate, duration)) /
+    (Math.pow(1 + rate, duration) - 1)
+  ).toFixed(2);
+
+  //Total payable amount
+  const paybleAmount = (emi * duration).toFixed(2);
+
+  //alert('EMI: ' + emi + '. Total payable amount: ' + paybleAmount);
+
+  alert(`EMI: ${emi}, Total payable amount: ${paybleAmount}`);
+};

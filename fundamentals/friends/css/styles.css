@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 3rem 3rem 0 3rem;
+  margin-bottom: none;
+  display: flex;
+  flex-direction: row;
+  align-items: first baseline;
+}
+
+.header #head {
+  flex-basis: 50%;
+  align-items: start;
+  justify-content: center;
+}
+
+.header .title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 45px;
+  color: teal;
+  margin-bottom: none;
+}
+
+.header .nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.header .nav ul li {
+  list-style: none;
+}
+
+.header .nav ul li a {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: teal;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0 0 5px 5px;
+}
+
+.header .nav ul li a:hover {
+  background-color: teal;
+  color: snow;
+}
+
+/* SIGN UP */
+
+.signup,
+.login,
+.friends,
+.friend {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.signup .form-title,
+.login .form-title,
+.friends .friends-title,
+.friend .friend-title {
+  padding: 2rem;
+  background-color: teal;
+  width: 60%;
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: snow;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+  border-radius: 0 0 10px 10px;
+}
+
+#form,
+#lform {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid teal;
+  border-radius: 5px;
+  box-shadow: 5px 5px rgba(0, 0, 9, 0.2);
+}
+
+form label {
+  color: black;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+form input {
+  padding-left: 0.5rem;
+  margin-bottom: 0.7rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+form input:focus {
+  background-color: rgb(179, 238, 238);
+  color: #fff;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+form > select {
+  margin-bottom: 0.7rem;
+  height: 2rem;
+  border-radius: 5px;
+  width: 30%;
+  border: 1px solid gray;
+}
+
+form button {
+  margin-top: 1rem;
+  border: none;
+  padding: 0.4rem;
+  background-color: teal;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #fff;
+  color: teal;
+  transition: ease-in;
+  transition-duration: 1s;
+  /* transform-style: preserve-3d; */
+  transition-delay: none;
+}
+
+#form .name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#form .name .fname,
+#form .name .lname {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LOGIN FORM */
+#login-form {
+  width: 25%;
+}
+
+/* FRIENDS */
+.friends-content {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.friends .friends-content table {
+  border: 1px solid teal;
+  border-radius: 10px 10px 0 0;
+}
+.friends .friends-content table.table thead tr th {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: teal;
+  height: 4rem;
+}
+
+#tbody tr td {
+  text-align: center;
+}
+
+.friends .friends-content table tbody#tbody tr:nth-child(even) {
+  background-color: red;
+}
+
+.friends .friends-content table tbody#tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* CARD */
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 4rem;
+}
+
+.intro .card {
+  flex-basis: 20%;
+  border-radius: 10px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid teal;
+}
+
+.intro .card .card-img img {
+  width: 100%;
+  height: 300px;
+}
+
+.card-text .name {
+  padding: 1rem;
+}
+.card-text .name span,
+.card-text .info span {
+  margin-right: 0.5rem;
+  color: teal;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.card-text .info {
+  padding: 1rem;
+}
+
+.card-text .info p {
+  margin-top: 2px;
+}
+
+#cname,
+#prof,
+#exp,
+#country,
+#club,
+#hobby {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: teal; */
+  color: #fff;
+}
+
+.foot {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: teal;
+  width: 100%;
+  padding: 6rem 3rem;
+  margin-top: 3rem;
+  /* height: 10rem; */
+}
+
+.foot .portal h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  font-style: normal;
+  font-variant: small-caps;
+}
+
+.foot .socials p {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  /* font-style: italic; */
+  font-variant: small-caps;
+  font-size: 20px;
+}
+
+.foot .map img {
+  border-radius: 5px;
+}
+
+.feet p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  font-variant: small-caps;
+  color: teal;
+  padding: 2rem;
+}

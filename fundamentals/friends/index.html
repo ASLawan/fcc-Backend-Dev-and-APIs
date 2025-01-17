@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>friends portal</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="title" id="head">Friends Portal</div>
+      <div class="nav" id="head">
+        <ul>
+          <li><a href="#" onclick="renderSection('home')">Home</a></li>
+          <li><a href="#" onclick="renderSection('signup')">Sign up</a></li>
+          <li><a href="#" onclick="renderSection('login')">Login</a></li>
+        </ul>
+      </div>
+      <div class="logged"></div>
+    </div>
+    <hr />
+    <div class="content">
+      <div class="signup">
+        <div class="form-title">Sign Up</div>
+        <div class="form-content">
+          <form action="" id="form">
+            <div class="name">
+              <div class="fname">
+                <label for="fname">First name</label>
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  placeholder="First name"
+                />
+              </div>
+              <div class="lname">
+                <label for="lname">Last name</label>
+                <input
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  placeholder="Last name"
+                />
+              </div>
+            </div>
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="susername"
+              placeholder="Username"
+            />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              name="number"
+              id="phone"
+              placeholder="Phone number"
+            />
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="spassword" />
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="login">
+        <div class="form-title">Login</div>
+        <div class="form-content" id="login-form">
+          <form action="" id="lform">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="lusername"
+              placeholder="Username ..."
+            />
+            <label for="password">Password</label>
+            <input
+              type="text"
+              name="password"
+              id="lpassword"
+              placeholder="Password..."
+            />
+            <button id="loginBtn" onclick="logIn()">Login</button>
+          </form>
+        </div>
+      </div>
+      <div class="friends">
+        <div class="friends-title" id="friends">Friends</div>
+        <div class="friends-content">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Nickname</th>
+                <th>Profession</th>
+                <th>Country</th>
+                <th>Marital Status</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <!-- <tr>
+                <td>Austin</td>
+                <td>Lawan</td>
+                <td>Pa Lawan</td>
+                <td>Software Engineer</td>
+                <td>Cameroon</td>
+                <td>Single</td>
+              </tr>
+              <tr>
+                <td>Kingsley</td>
+                <td>Wirba</td>
+                <td>The Game</td>
+                <td>DevOps Engineer</td>
+                <td>Cameroon</td>
+                <td>Married</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="friend">
+        <div class="friend-title">Friends</div>
+        <div class="intro">
+          <!-- <div class="card">
+            <div class="card-img">
+              <img src="imgs/lawan.jpg" alt="Lawan" />
+            </div>
+            <div class="card-text">
+              <div class="name"><span>Name:</span><span id="cname"></span></div>
+              <div class="info">
+                <p><span>Profession: </span><span id="prof"></span></p>
+                <p><span>Experience: </span><span id="exp"></span></p>
+                <p><span>Country: </span><span id="country"></span></p>
+                <p><span>Football Club: </span><span id="club"></span></p>
+                <p><span>Hobbies: </span><span id="hobby"></span></p>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="card">
+            <div class="card-img">
+              <img src="imgs/game.jpg" alt="Lawan" />
+            </div>
+            <div class="card-text">
+              <div class="name"><span>Name:</span><span id="cname"></span></div>
+              <div class="info">
+                <p><span>Profession: </span><span id="prof"></span></p>
+                <p><span>Experience: </span><span id="exp"></span></p>
+                <p><span>Country: </span><span id="country"></span></p>
+                <p><span>Football Club: </span><span id="club"></span></p>
+                <p><span>Hobbies: </span><span id="hobby"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="imgs/echo.jpg" alt="Lawan" />
+            </div>
+            <div class="card-text">
+              <div class="name"><span>Name:</span><span id="cname"></span></div>
+              <div class="info">
+                <p><span>Profession: </span><span id="prof"></span></p>
+                <p><span>Experience: </span><span id="exp"></span></p>
+                <p><span>Country: </span><span id="country"></span></p>
+                <p><span>Football Club: </span><span id="club"></span></p>
+                <p><span>Hobbies: </span><span id="hobby"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="imgs/paddy.jpg" alt="Lawan" />
+            </div>
+            <div class="card-text">
+              <div class="name"><span>Name:</span><span id="cname"></span></div>
+              <div class="info">
+                <p><span>Profession: </span><span id="prof"></span></p>
+                <p><span>Experience: </span><span id="exp"></span></p>
+                <p><span>Country: </span><span id="country"></span></p>
+                <p><span>Football Club: </span><span id="club"></span></p>
+                <p><span>Hobbies: </span><span id="hobby"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="imgs/doc.jpg" alt="Lawan" />
+            </div>
+            <div class="card-text">
+              <div class="name"><span>Name:</span><span id="cname"></span></div>
+              <div class="info">
+                <p><span>Profession: </span><span id="prof"></span></p>
+                <p><span>Experience: </span><span id="exp"></span></p>
+                <p><span>Country: </span><span id="country"></span></p>
+                <p><span>Football Club: </span><span id="club"></span></p>
+                <p><span>Hobbies: </span><span id="hobby"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="imgs/joe.jpg" alt="Lawan" />
+            </div>
+            <div class="card-text">
+              <div class="name"><span>Name:</span><span id="cname"></span></div>
+              <div class="info">
+                <p><span>Profession: </span><span id="prof"></span></p>
+                <p><span>Experience: </span><span id="exp"></span></p>
+                <p><span>Country: </span><span id="country"></span></p>
+                <p><span>Football Club: </span><span id="club"></span></p>
+                <p><span>Hobbies: </span><span id="hobby"></span></p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="foot">
+        <div class="portal">
+          <h1>Friends Portal</h1>
+        </div>
+        <div class="socials">
+          <p>Facebook</p>
+          <p>instagram</p>
+          <p>TikTok</p>
+          <p>WhatsApp</p>
+        </div>
+        <div class="map">
+          <img src="imgs/lawan.jpg" alt="" />
+        </div>
+      </div>
+      <div class="feet">
+        <p>&copy; 2024, Designed and Developed by: LaivTech</p>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

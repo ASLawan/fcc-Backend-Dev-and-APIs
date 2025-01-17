@@ -70,11 +70,11 @@ const isValid = (str) => {
 };
 
 let testArr = "(){}[]";
-let testArr2 = "({[()]})";
+let testArr2 = "{[])";
 let testArr3 = "([)]";
 let testArr4 = "(((";
 
-if (isValid(testArr4)) {
+if (isValid(testArr2)) {
   console.log("valid");
 } else {
   console.log("invalid");
